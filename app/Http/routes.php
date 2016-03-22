@@ -1,5 +1,5 @@
 <?php
-
+use App\Note;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -13,4 +13,11 @@
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('notes',function(){
+
+	$notes =\App\Note::all();
+	dd($notes);
+	return view('notes');
 });
