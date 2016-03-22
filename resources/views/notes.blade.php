@@ -6,7 +6,11 @@
 <body>
 
 	<h2>Notes</h2>
-	<p>My first note</p>
+	<ul>
+		@foreach($notes as $note)
+			<li>{{ $note->note }}</li>
+		@endforeach
+	</ul>
 
 </body>
 </html>

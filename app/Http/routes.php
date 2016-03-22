@@ -18,6 +18,6 @@ Route::get('/', function () {
 Route::get('notes',function(){
 
 	$notes =\App\Note::all();
-	dd($notes);
-	return view('notes');
+
+	return view('notes',compact('notes'));
 });
