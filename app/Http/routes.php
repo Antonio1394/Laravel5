@@ -26,6 +26,6 @@ Route::get('notes/create', function(){
 	return '[Create Note]';
 });
 
-Route::get('notes/{note}/{slog}',function($note,$slog){
+Route::get('notes/{note}/{slog?}',function($note,$slog=null){
 	dd($note,$slog);
 })->where('note','[0-9]+');
