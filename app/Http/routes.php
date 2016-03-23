@@ -21,3 +21,11 @@ Route::get('notes',function(){
 
 	return view('notes',compact('notes'));
 });
+
+Route::get('notes/create', function(){
+	return '[Create Note]';
+});
+
+Route::get('notes/{note}/{slog}',function($note,$slog){
+	dd($note,$slog);
+})->where('note','[0-9]+');
