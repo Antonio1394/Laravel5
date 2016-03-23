@@ -24,7 +24,7 @@ Route::get('notes',function(){
 
 Route::post('notes',function(){
 
-	return 'creating a note';
+	return 'Creating a note';
 });
 
 

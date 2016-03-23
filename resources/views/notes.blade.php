@@ -12,11 +12,6 @@
 		@endforeach
 	</ul>
 
-	<form method="post">
-		<input type="text" name="_token" value="{{ csrf_token() }}">
-		<textarea></textarea>
-		<button type="submit">Create note</button>
-	</form>
 
 </body>
 </html>
