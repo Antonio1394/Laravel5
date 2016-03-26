@@ -52,6 +52,9 @@
 
       @yield('content')
 
+      <hr>
+      <p>&copy; 2016-https://styde.net</p>
+
     </div><!-- /.container -->
 
 
