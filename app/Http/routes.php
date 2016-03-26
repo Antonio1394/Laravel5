@@ -19,7 +19,7 @@ Route::get('notes',function(){
 
 	$notes =\App\Note::all();
 
-	return view('notes',compact('notes'));
+	return view('notes/list',compact('notes'));
 });
 
 Route::post('notes',function(){
@@ -28,11 +28,8 @@ Route::post('notes',function(){
 });
 
 
-
 Route::get('notes/create', function(){
-	return '[Create Note]';
+	return view('notes/create');
 });
 
-Route::get('notes/{note}/{slog?}',function($note,$slog=null){
-	dd($note,$slog);
-})->where('note','[0-9]+');
+
