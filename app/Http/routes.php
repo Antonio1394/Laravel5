@@ -17,9 +17,7 @@ Route::get('/', function () {
 
 Route::get('notes',function(){
 
-	$notes =\App\Note::all();
-
-	return view('notes/list',compact('notes'));
+	
 });
 
 Route::post('notes',function(){
