@@ -6,6 +6,7 @@
 		{!! csrf_field() !!}
 
 		<textarea name="note"></textarea>
+		<button type="submit">Create note</button>
 	</form>
 
 @endsection
