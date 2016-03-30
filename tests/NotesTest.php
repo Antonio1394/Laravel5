@@ -34,7 +34,7 @@ class NotesTest extends TestCase
             ->press('Create note')
             ->seePageIs('notes')
             ->see('A new note')
-            ->seeIndDatabase('notes',[
+            ->seeInDatabase('notes',[
                     'note'=>'A new note'
                 ]);
     }
