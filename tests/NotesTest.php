@@ -26,7 +26,16 @@ class NotesTest extends TestCase
 
     public function test_create_note()
     {
-        $this->post('notes')
-            ->see('Creating a note');
+        $this->visit('notes')
+            ->click('Add a note')
+            ->seePageIs('notes/create')
+            ->see('Create a note')
+            ->type('A new note','note')
+            ->press('Create note')
+            ->seePageIs('notes')
+            ->see('A new note')
+            ->seeIndDatabase('notes',[
+                    'note'=>'A new note'
+                ]);
     }
 }
