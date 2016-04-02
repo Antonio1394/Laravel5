@@ -13,7 +13,7 @@ class AddCategoriesColumnToNotes extends Migration
     public function up()
     {
         Schema::table('notes', function (Blueprint $table) {
-            //
+            $table->unsignedInteger('category_id')->nullable()->index();
         });
     }
 
@@ -25,7 +25,7 @@ class AddCategoriesColumnToNotes extends Migration
     public function down()
     {
         Schema::table('notes', function (Blueprint $table) {
-            //
+            $table->dropColumn('category_id');
         });
     }
 }
