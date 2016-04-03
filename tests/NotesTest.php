@@ -8,7 +8,6 @@ use App\Note;
 
 class NotesTest extends TestCase
 {
-    use WithoutMiddleware;
 
    
     public function test_notes_list()
