@@ -60,7 +60,7 @@ return [
             'strict'    => false,
         ],
 
-        'mysql_test' => [
+        'mysql_tests' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
             'database'  => env('DB_DATABASE', 'forge').'_tests',
