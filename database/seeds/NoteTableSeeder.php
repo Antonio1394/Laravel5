@@ -13,10 +13,6 @@ class NoteTableSeeder extends Seeder
     public function run()
     {
 
-    	for ($i=1; $i<=100; $i++) {   
-    	 	Note::create(['note' => "Note $i"]);
-       		# code...
-    	}
-        
+    	factory(Note::class)->times(100)->create();        
     }
 }
