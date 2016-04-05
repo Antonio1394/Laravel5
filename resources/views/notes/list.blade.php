@@ -9,6 +9,7 @@
 		@foreach($notes as $note)
 
 			<li class="list-group-item">
+				{{ $note->category->name }}
 				{{ $note->note }}
 			</li>
 		@endforeach
