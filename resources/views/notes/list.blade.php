@@ -9,8 +9,11 @@
 		@foreach($notes as $note)
 
 			<li class="list-group-item">
-			<span class="label label-danger">{{ $note->category->name }}</span>
-				
+			@if ($note->category)
+				<span class="label label-danger">{{ $note->category->name }}</span>
+			@else
+				<span class="label label-danger">Others</span>	
+			@endif
 				{{ $note->note }}
 			</li>
 		@endforeach
