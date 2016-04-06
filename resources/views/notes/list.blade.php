@@ -15,6 +15,7 @@
 				<span class="label label-danger">Others</span>	
 			@endif
 				{{ $note->note }}
+				<a  class="btn btn-danger btn-xs" href="#">View note</a>
 			</li>
 		@endforeach
 	</ul>

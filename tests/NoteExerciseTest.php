@@ -21,7 +21,7 @@ class NoteExerciseTest extends TestCase
         	->see('Begin of the note')
         	->seeInElement('.label','Others')
         	->dontSee('End of the note')
-        	->seeLink('view note')
+        	->seeLink('View note')
         	->click('View note')
         	->see($text);
     }
