@@ -9,7 +9,7 @@
 		@foreach($notes as $note)
 
 			<li class="list-group-item">
-			<span class="label label-info">{{ $note->category->name }}</span>
+			<span class="label label-danger">{{ $note->category->name }}</span>
 				
 				{{ $note->note }}
 			</li>
