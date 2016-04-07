@@ -12,10 +12,10 @@
 			@if ($note->category)
 				<span class="label label-danger">{{ $note->category->name }}</span>
 			@else
-				<span class="label label-danger">Others</span>	
+				<span class="label label-info">Others</span>	
 			@endif
-				{{ $note->note }}
-				<a  class="btn btn-danger btn-xs" href="#">View note</a>
+				{{ substr($note->note, 0, 100) }}...
+				<a style="float=right" class="btn btn-primary btn-xs" href="{{ url('notes/'.$note->id) }}">View note</a>
 			</li>
 		@endforeach
 	</ul>
