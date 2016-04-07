@@ -23,6 +23,8 @@ class NoteExerciseTest extends TestCase
         	->dontSee('End of the note')
         	->seeLink('View note')
         	->click('View note')
-        	->see($text);
+        	->see($text)
+            ->seeLink('View all notes','notes');
+
     }
 }

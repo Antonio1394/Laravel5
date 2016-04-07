@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<h1>Create a note</h1>
-			{{ $note -> note }}
+			
 			<p>
 				Categoria:
 				@if ($note->category)
@@ -12,7 +12,9 @@
 				@else
 					<span class="label label-info">Others</span>	
 				@endif
+				| <a href="{{ url('notes') }}" class="btn btn-info btn-xs">View all notes</a>
 			</p>
+			{{ $note -> note }}
 			
 		</div>
 	</div>
