@@ -15,7 +15,7 @@
 				<span class="label label-info">Others</span>	
 			@endif
 				{{ substr($note->note, 0, 100) }}...
-				<a style="float=right" class="btn btn-primary btn-xs" href="{{ url('notes/'.$note->id) }}">View note</a>
+				<a href="{{ url('notes/'.$note->id) }}" class="btn btn-primary btn-xs">View note</a>
 			</li>
 		@endforeach
 	</ul>
