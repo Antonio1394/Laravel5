@@ -24,14 +24,14 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">{{ trans('validation.attributes.email') }}</label>
 							<div class="col-md-6">
-								<input type="email" value="{{ old('email') }}" class="form-control">
+								{!! Form:: text('email', null, ['class' => 'form-control','type' => 'email' ]) !!}
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">{{ trans('validation.attributes.password') }}</label>
 							<div class="col-md-6">
-								<input type="password" class="form-control">
+								{!! Form:: password('password', ['class' => 'form-control']) !!}
 							</div>
 						</div>
 
