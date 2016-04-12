@@ -16,7 +16,10 @@ Route::get('/', function () {
 });
 
 // Authentication routes...
-Route::get('login', 'Auth\AuthController@getLogin');
+Route::get('login',[ 
+	'uses' => 'Auth\AuthController@getLogin',
+	'as' => 'login'
+	]);
 Route::post('login', 'Auth\AuthController@postLogin');
 Route::get('logout', 'Auth\AuthController@getLogout');
 
