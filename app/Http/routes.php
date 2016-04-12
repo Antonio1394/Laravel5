@@ -21,7 +21,11 @@ Route::get('inicio-sesion',[
 	'as' => 'login'
 ]);
 Route::post('inicio-sesion', 'Auth\AuthController@postLogin');
-Route::get('logout', 'Auth\AuthController@getLogout');
+
+Route::get('logout', [
+	'uses' => 'Auth\AuthController@getLogout',
+	'as'   => 'logout'	
+]);
 
 // Registration routes...
 Route::get('register', [
