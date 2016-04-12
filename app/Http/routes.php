@@ -16,11 +16,11 @@ Route::get('/', function () {
 });
 
 // Authentication routes...
-Route::get('login',[ 
+Route::get('inicio-sesion',[ 
 	'uses' => 'Auth\AuthController@getLogin',
 	'as' => 'login'
-	]);
-Route::post('login', 'Auth\AuthController@postLogin');
+]);
+Route::post('inicio-sesion', 'Auth\AuthController@postLogin');
 Route::get('logout', 'Auth\AuthController@getLogout');
 
 // Registration routes...
