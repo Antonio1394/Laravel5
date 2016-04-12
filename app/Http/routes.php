@@ -24,7 +24,10 @@ Route::post('inicio-sesion', 'Auth\AuthController@postLogin');
 Route::get('logout', 'Auth\AuthController@getLogout');
 
 // Registration routes...
-Route::get('register', 'Auth\AuthController@getRegister');
+Route::get('register', [
+	'uses' => 'Auth\AuthController@getRegister',
+	'as'   => 'register'
+	]);
 Route::post('register', 'Auth\AuthController@postRegister');
 
 // Password reset link request routes...
