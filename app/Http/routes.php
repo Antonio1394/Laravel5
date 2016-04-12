@@ -11,9 +11,12 @@ use App\Note;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+	'uses' => 'HomeController@index',
+	'as'   => 'home'
+
+
+);
 
 // Authentication routes...
 Route::get('inicio-sesion',[ 
