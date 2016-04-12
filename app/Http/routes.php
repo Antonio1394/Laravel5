@@ -16,10 +16,10 @@ Route::get('/', [
 	'as'   => 'home'
 
 
-);
+]);
 
 // Authentication routes...
-Route::get('inicio-sesion',[ 
+Route::get('inicio-sesion', [ 
 	'uses' => 'Auth\AuthController@getLogin',
 	'as' => 'login'
 ]);
