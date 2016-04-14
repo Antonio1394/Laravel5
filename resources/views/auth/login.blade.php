@@ -5,11 +5,11 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
+				<div class="panel-heading">@lang('auth.login_title')</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
-							Por favor corrige los siguientes errores:<br><br>
+							@lang('auth.errors_title')<br><br>
 							<ul>
 								@foreach ($errors->all() as $error)
 									<li>{{ $error }}</li>
@@ -29,7 +29,7 @@
 						</div>
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">{{ trans('validation.attributes.password') }}</label>
+							<label class="col-md-4 control-label">@lang('validation.attributes.password')</label>
 							<div class="col-md-6">
 								{!! Form:: password('password', ['class' => 'form-control']) !!}
 							</div>
@@ -39,7 +39,7 @@
 							<div class="col-md-6 col-md-offset-4">
 								<div class="checkbox">
 									<label>
-										<input type="checkbox" name="remember"> Remember Me
+										<input type="checkbox" name="remember">@lang('auth.remember')
 									</label>
 								</div>
 							</div>

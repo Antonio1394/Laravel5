@@ -55,7 +55,7 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        $user new User([
+        $user = new User([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
