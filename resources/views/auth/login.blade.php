@@ -7,17 +7,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">@lang('auth.login_title')</div>
 				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							@lang('auth.errors_title')<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
-
+						@include('partials/errors')
 					<form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -48,10 +38,10 @@
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								<button type="submit" class="btn btn-primary" style="margin-right: 15px;">
-									Login
+									@lang('auth.login_button')
 								</button>
 
-								<a href="/password/email">Forgot Your Password?</a>
+								<a href="/password/email">@lang('auth.forgot_link')</a>
 							</div>
 						</div>
 					</form>
